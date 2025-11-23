@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Secret Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: pink;
+            flex-direction: column;
+        }
+        input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background: red;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter Secret Code 💖</h2>
+    <input type="password" id="code" placeholder="Secret code">
+    <button onclick="check()">Submit</button>
+
+    <script>
+        function check() {
+            let val = document.getElementById("code").value;
+            if (val === "iloveyou") {
+                window.location.href = "/";
+            } else {
+                alert("Wrong code 😔");
+            }
+        }
+    </script>
+
+</body>
+</html>
